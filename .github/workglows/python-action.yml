@@ -1,0 +1,19 @@
+name: Run Python Script
+
+on:
+  push:
+    branches:
+      - main # Adjust this to your main branch name or other relevant branches
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Run Python script
+      run: |
+        python process.py
+
